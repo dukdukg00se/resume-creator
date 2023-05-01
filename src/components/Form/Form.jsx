@@ -1,4 +1,5 @@
 import React from 'react';
+import Personal from './components/Personal';
 
 class Form extends React.Component {
   constructor() {
@@ -6,7 +7,11 @@ class Form extends React.Component {
   }
 
   render() {
-    return <form>test</form>;
+    return (
+      <form>
+        <Personal />
+      </form>
+    );
   }
 }
 
