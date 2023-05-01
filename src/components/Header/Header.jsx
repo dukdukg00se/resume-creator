@@ -6,7 +6,11 @@ class Header extends React.Component {
   }
 
   render() {
-    return <h1>Resume Creator</h1>;
+    return (
+      <div>
+        <h1>Resume Creator</h1>
+      </div>
+    );
   }
 }
 
