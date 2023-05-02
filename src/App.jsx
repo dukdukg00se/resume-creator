@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Form from './components/Form/Form';
-import Resume from './components/Resume/Resume';
+import Header from './components/header/Header';
+import Form from './components/form/Form';
+import Resume from './components/resume/Resume';
 import './App.css';
 
 class App extends React.Component {
