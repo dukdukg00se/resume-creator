@@ -7,9 +7,9 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <header>
         <h1>Resume Creator</h1>
-      </div>
+      </header>
     );
   }
 }
