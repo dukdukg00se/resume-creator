@@ -1,13 +1,18 @@
 import React from 'react';
+import ResumeHeader from './components/ResumeHeader';
 
-class Cv extends React.Component {
+class Resume extends React.Component {
   constructor() {
     super();
   }
 
   render() {
-    return <div>test2</div>;
+    return (
+      <div>
+        <ResumeHeader />
+      </div>
+    );
   }
 }
 
-export default Cv;
+export default Resume;
