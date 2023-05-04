@@ -1,23 +1,24 @@
 import React from 'react';
-import Personal from './components/Personal';
-import Experience from './components/Experience';
-import Education from './components/Education';
+import Personal from './components/FormPersonal';
+import Experience from './components/FormExperience';
+import Education from './components/FormEducation';
+/* eslint-disable */
 
 class Form extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
+    // console.log(this.props.personalInfo);
     return (
       <form>
         <section>
           <h2>Personal Information</h2>
-          <Personal />
+          <Personal
+            onChange={this.props.onChange}
+            personalInfo={this.props.personalInfo}
+          />
         </section>
         <section>
           <h2>Experience</h2>
-          <Experience />
+          <Experience onChange={this.props.onChange} />
         </section>
         <section>
           <h2>Education</h2>
