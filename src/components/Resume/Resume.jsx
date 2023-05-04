@@ -1,15 +1,25 @@
 import React from 'react';
-import ResumeHeader from './components/ResumeHeader';
+import Header from './components/ResumeHeader';
+import Summary from './components/ResumeSummary';
+
+/* eslint-disable */
 
 class Resume extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
+    // Get all info except summary from "personal" key
+    const personalInfo = (({ name, title, address, phone, email }) => ({
+      name,
+      title,
+      address,
+      phone,
+      email,
+    }))(this.props.personal);
+    const { summary } = this.props.personal;
+
     return (
       <div>
-        <ResumeHeader />
+        <Header personal={personalInfo} />
+        <Summary summary={summary} />
       </div>
     );
   }
