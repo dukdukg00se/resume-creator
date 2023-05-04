@@ -21,7 +21,7 @@ class App extends React.Component {
       experience: {
         position: '',
         company: '',
-        city: '',
+        location: '',
         from: '',
         to: '',
         responsibilities: '',
@@ -31,8 +31,7 @@ class App extends React.Component {
         degree: '',
         major: '',
         university: '',
-        from: '',
-        to: '',
+        graduated: '',
         description: '',
         id: uniqid(),
       },
@@ -61,21 +60,11 @@ class App extends React.Component {
       <div>
         <Header />
         <Form onChange={this.handleChange} personalInfo={this.state.personal} />
-        <Resume personal={this.state.personal} />
-        <ul>
-          <li>{this.state.personal.name}</li>
-          <li>{this.state.personal.title}</li>
-          <li>{this.state.personal.address}</li>
-          <li>{this.state.personal.phone}</li>
-          <li>{this.state.personal.email}</li>
-          <li>{this.state.personal.summary}</li>
-          <li>{this.state.experience.position}</li>
-          <li>{this.state.experience.company}</li>
-          <li>{this.state.personal.city}</li>
-          <li>{this.state.experience.from}</li>
-          <li>{this.state.experience.to}</li>
-          <li>{this.state.experience.responsibilities}</li>
-        </ul>
+        <Resume
+          personal={this.state.personal}
+          experience={this.state.experience}
+          education={this.state.education}
+        />
       </div>
     );
   }
