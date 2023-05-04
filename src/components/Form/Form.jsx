@@ -6,7 +6,6 @@ import Education from './components/FormEducation';
 
 class Form extends React.Component {
   render() {
-    // console.log(this.props.personalInfo);
     return (
       <form>
         <section>
@@ -22,7 +21,7 @@ class Form extends React.Component {
         </section>
         <section>
           <h2>Education</h2>
-          <Education />
+          <Education onChange={this.props.onChange} />
         </section>
       </form>
     );
