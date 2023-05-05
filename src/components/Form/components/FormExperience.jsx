@@ -19,7 +19,7 @@ class FormExperience extends React.Component {
           onChange={this.props.onChange}
         ></input>
         <input
-          name="city"
+          name="location"
           type="text"
           placeholder="City"
           // value={this.props.city}
