@@ -12,7 +12,7 @@ class ResumeHeader extends React.Component {
           <ul>
             <li>{this.props.personal.address}</li>
             <li>{this.props.personal.email}</li>
-            <li>{this.props.personal.address}</li>
+            <li>{this.props.personal.phone}</li>
           </ul>
         </div>
       </header>
