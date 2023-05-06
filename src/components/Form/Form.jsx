@@ -2,26 +2,47 @@ import React from 'react';
 import Personal from './components/FormPersonal';
 import Experience from './components/FormExperience';
 import Education from './components/FormEducation';
+import { Add, Clear, Delete } from './components/Buttons';
+
 /* eslint-disable */
 
 class Form extends React.Component {
   render() {
     return (
       <form>
-        <section>
+        <section id="personal">
           <h2>Personal Information</h2>
           <Personal
             onChange={this.props.onChange}
             personalInfo={this.props.personalInfo}
           />
+          <div className="btn-container">
+            <Clear onClick={this.props.onClick} />
+          </div>
         </section>
-        <section>
+
+        <section id="experience">
           <h2>Experience</h2>
-          <Experience onChange={this.props.onChange} />
+          <Experience
+            onChange={this.props.onChange}
+            experience={this.props.experience}
+          />
+
+          <div className="btn-container">
+            <Clear onClick={this.props.onClick} />
+            <Delete onClick={this.props.onClick} />
+            <Add onClick={this.props.onClick} />
+          </div>
         </section>
-        <section>
+
+        <section id="education">
           <h2>Education</h2>
           <Education onChange={this.props.onChange} />
+          <div className="btn-container">
+            <Clear onClick={this.props.onClick} />
+            <Delete onClick={this.props.onClick} />
+            <Add onClick={this.props.onClick} />
+          </div>
         </section>
       </form>
     );
