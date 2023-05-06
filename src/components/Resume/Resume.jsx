@@ -22,9 +22,21 @@ class Resume extends React.Component {
     return (
       <div>
         <Header personal={personalInfo} />
-        <Summary summary={summary} />
-        <Experience experience={this.props.experience} />
-        <Education education={this.props.education} />
+
+        <section>
+          <h3>SUMMARY</h3>
+          <Summary summary={summary} />
+        </section>
+
+        <section>
+          <h3>EXPERIENCE</h3>
+          <Experience experience={this.props.experience} />
+        </section>
+
+        <section>
+          <h3>EDUCATION</h3>
+          <Education education={this.props.education} />
+        </section>
       </div>
     );
   }
