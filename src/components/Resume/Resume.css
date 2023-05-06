@@ -29,3 +29,16 @@ form + div > section + section > h3 {
   line-height: 42px;
   margin: 0;
 }
+
+/* Move this later */
+/* Experience and Education sections h4 and span */
+form + div > section + section > div > div:first-of-type {
+  background-color: #9fb6de;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  font-size: 24px;
+}
