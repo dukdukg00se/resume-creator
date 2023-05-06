@@ -6,22 +6,23 @@ class ResumeExperience extends React.Component {
     const { experience } = this.props;
 
     return (
-      <section>
-        <h3>Experience</h3>
+      <div>
         <div>
           <h4>{experience.position}</h4>
           <span>
             {experience.from} - {experience.to}
           </span>
         </div>
+
         <div>
           {experience.company}
           <span>{experience.location}</span>
         </div>
+
         <div>
           <p>{experience.responsibilities}</p>
         </div>
-      </section>
+      </div>
     );
   }
 }

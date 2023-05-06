@@ -5,14 +5,13 @@ class ResumeEducation extends React.Component {
     const { education } = this.props;
 
     return (
-      <section>
-        <h3>Education</h3>
+      <div>
         <div>
           {education.degree} • {education.major} • {education.university}
           <span>{education.graduated}</span>
         </div>
         <div>{education.description}</div>
-      </section>
+      </div>
     );
   }
 }
