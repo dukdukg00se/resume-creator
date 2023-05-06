@@ -40,6 +40,7 @@ class App extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(e) {
@@ -55,11 +56,33 @@ class App extends React.Component {
     });
   }
 
+  handleClick(e) {
+    this.setState((state) => {
+      let action = e.target.name;
+      let parent = e.target.parentElement.parentElement.id;
+      let newObj = { ...state[parent] };
+
+      if (action === 'clear') {
+        console.log(newObj);
+        for (let key in newObj) {
+          newObj[key] = '';
+        }
+
+        return { [parent]: newObj };
+      }
+    });
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <Form onChange={this.handleChange} personalInfo={this.state.personal} />
+        <Form
+          onChange={this.handleChange}
+          onClick={this.handleClick}
+          personalInfo={this.state.personal}
+          experience={this.state.experience}
+        />
         <Resume
           personal={this.state.personal}
           experience={this.state.experience}
