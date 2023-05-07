@@ -35,8 +35,36 @@ class App extends React.Component {
         description: '',
         id: uniqid(),
       },
-      experienceList: [],
-      educationList: [],
+      experienceList: [
+        {
+          position: '',
+          company: '',
+          location: '',
+          from: '',
+          to: '',
+          responsibilities: '',
+          id: uniqid(),
+        },
+        {
+          position: '',
+          company: '',
+          location: '',
+          from: '',
+          to: '',
+          responsibilities: '',
+          id: uniqid(),
+        },
+      ],
+      educationList: [
+        {
+          degree: '',
+          major: '',
+          university: '',
+          graduated: '',
+          description: '',
+          id: uniqid(),
+        },
+      ],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -45,13 +73,29 @@ class App extends React.Component {
 
   handleChange(e) {
     this.setState((state) => {
-      let parent = e.target.parentElement.id; // e.g., personal
-      let child = e.target.name; // e.g., name
-      let newObj = { ...state[parent] };
-      newObj[child] = e.target.value;
+      const element = e.target.parentElement;
+      const stateKey =
+        element.id === 'personal' ? 'personal' : element.parentElement.id;
+      const subKey = e.target.name; // e.g., name
 
+      if (stateKey === 'personal') {
+        let newObj = { ...state[stateKey] };
+        newObj[subKey] = e.target.value;
+        return {
+          [stateKey]: newObj,
+        };
+      }
+
+      let newArr = [...state[stateKey]];
+      for (let i = 0; i < newArr.length; i++) {
+        if (newArr[i].id === element.id) {
+          let newObj = { ...newArr[i] };
+          newObj[subKey] = e.target.value;
+          newArr[i] = newObj;
+        }
+      }
       return {
-        [parent]: newObj,
+        [stateKey]: newArr,
       };
     });
   }
@@ -60,16 +104,34 @@ class App extends React.Component {
     this.setState((state) => {
       let action = e.target.name;
       let parent = e.target.parentElement.parentElement.id;
-      let newObj = { ...state[parent] };
 
-      if (action === 'clear') {
-        console.log(newObj);
-        for (let key in newObj) {
-          newObj[key] = '';
-        }
+      console.log(e.target);
 
-        return { [parent]: newObj };
-      }
+      // if (action === 'clear') {
+      //   if (parent === 'personal') {
+      //     let newObj = { ...state[parent] };
+      //     for (let key in newObj) {
+      //       newObj[key] = '';
+      //     }
+
+      //     return { [parent]: newObj };
+      //   }
+
+      //   let newArr = [...state[parent]];
+      //   for (let i = 0; i < newArr.length; i++) {
+      //     for (let key in newArr[i]) {
+      //       newArr[i][key] = '';
+      //     }
+      //   }
+
+      //   return {
+      //     [parent]: newArr,
+      //   };
+      // }
+
+      // if (action === 'add') {
+      //   console.log(parent);
+      // }
     });
   }
 
@@ -81,12 +143,14 @@ class App extends React.Component {
           onChange={this.handleChange}
           onClick={this.handleClick}
           personalInfo={this.state.personal}
-          experience={this.state.experience}
+          experienceList={this.state.experienceList}
+          educationList={this.state.educationList}
         />
+
         <Resume
           personal={this.state.personal}
           experience={this.state.experience}
-          education={this.state.education}
+          education={this.state.educationList}
         />
       </div>
     );
