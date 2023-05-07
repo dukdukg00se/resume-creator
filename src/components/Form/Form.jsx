@@ -25,7 +25,7 @@ class Form extends React.Component {
           <h2>Experience</h2>
           <Experience
             onChange={this.props.onChange}
-            experience={this.props.experience}
+            experienceList={this.props.experienceList}
           />
 
           <div className="btn-container">
