@@ -10,7 +10,7 @@ class Form extends React.Component {
   render() {
     return (
       <form>
-        <section id="personal">
+        <section>
           <h2>Personal Information</h2>
           <Personal
             onChange={this.props.onChange}
@@ -21,7 +21,7 @@ class Form extends React.Component {
           </div>
         </section>
 
-        <section id="experience">
+        <section>
           <h2>Experience</h2>
           <Experience
             onChange={this.props.onChange}
@@ -35,9 +35,12 @@ class Form extends React.Component {
           </div>
         </section>
 
-        <section id="education">
+        <section>
           <h2>Education</h2>
-          <Education onChange={this.props.onChange} />
+          <Education
+            onChange={this.props.onChange}
+            educationList={this.props.educationList}
+          />
           <div className="btn-container">
             <Clear onClick={this.props.onClick} />
             <Delete onClick={this.props.onClick} />
