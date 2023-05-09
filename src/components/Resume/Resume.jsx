@@ -23,17 +23,17 @@ class Resume extends React.Component {
       <div>
         <Header personal={personalInfo} />
 
-        <section>
+        <section className="section">
           <h3>SUMMARY</h3>
           <Summary summary={summary} />
         </section>
 
-        <section>
+        <section className="section">
           <h3>EXPERIENCE</h3>
-          <Experience experience={this.props.experience} />
+          <Experience experienceList={this.props.experienceList} />
         </section>
 
-        <section>
+        <section className="section">
           <h3>EDUCATION</h3>
           <Education education={this.props.education} />
         </section>

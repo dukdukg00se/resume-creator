@@ -162,7 +162,7 @@ class App extends React.Component {
 
         <Resume
           personal={this.state.personal}
-          experience={this.state.experienceList}
+          experienceList={this.state.experienceList}
           education={this.state.educationList}
         />
       </div>
