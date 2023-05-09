@@ -13,7 +13,10 @@ form + div > header {
 form + div > section:first-of-type {
 }
 
-form + div > section:first-of-type > h3 {
+.section {
+}
+
+.section > h3 {
   background-color: #4372c4;
   color: white;
   font-size: 24px;
@@ -21,14 +24,22 @@ form + div > section:first-of-type > h3 {
   margin: 0;
 }
 
-/* Experience and Education sections */
-form + div > section + section > h3 {
+/* form + div > section:first-of-type > h3 {
   background-color: #4372c4;
   color: white;
   font-size: 24px;
   line-height: 42px;
   margin: 0;
-}
+} */
+
+/* Experience and Education sections */
+/* form + div > section + section > h3 {
+  background-color: #4372c4;
+  color: white;
+  font-size: 24px;
+  line-height: 42px;
+  margin: 0;
+} */
 
 /* Move this later */
 /* Experience and Education sections h4 and span */
