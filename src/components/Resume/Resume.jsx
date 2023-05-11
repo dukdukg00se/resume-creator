@@ -20,7 +20,7 @@ class Resume extends React.Component {
     const { summary } = this.props.personal;
 
     return (
-      <div>
+      <div id="resume-preview">
         <Header personal={personalInfo} />
 
         <section className="section">
@@ -35,7 +35,7 @@ class Resume extends React.Component {
 
         <section className="section">
           <h3>EDUCATION</h3>
-          <Education education={this.props.education} />
+          <Education educationList={this.props.educationList} />
         </section>
       </div>
     );
