@@ -1,3 +1,6 @@
+import emailIcon from '../../../assets/email-icon.svg';
+import locationIcon from '../../../assets/location-icon.svg';
+import phoneIcon from '../../../assets/phone-icon.svg';
 import React from 'react';
 
 class ResumeHeader extends React.Component {
@@ -10,9 +13,18 @@ class ResumeHeader extends React.Component {
         </div>
         <div>
           <ul>
-            <li>{this.props.personal.address}</li>
-            <li>{this.props.personal.email}</li>
-            <li>{this.props.personal.phone}</li>
+            <li>
+              <img src={phoneIcon} alt="icon" className="phone icon" />
+              {this.props.personal.address}
+            </li>
+            <li>
+              <img src={emailIcon} alt="icon" className="email icon" />
+              {this.props.personal.email}
+            </li>
+            <li>
+              <img src={locationIcon} alt="icon" className="location icon" />
+              {this.props.personal.phone}
+            </li>
           </ul>
         </div>
       </header>
