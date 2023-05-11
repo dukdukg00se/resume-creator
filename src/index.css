@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  /* font-size: 1.6rem; */
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
