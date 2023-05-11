@@ -1,10 +1,11 @@
+import './Header.css';
 import React from 'react';
 
 class Header extends React.Component {
   render() {
     return (
-      <header>
-        <h1>Resume Creator</h1>
+      <header id="page-header">
+        <h1>-RESUME CREATOR-</h1>
       </header>
     );
   }
