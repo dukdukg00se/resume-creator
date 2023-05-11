@@ -1,10 +1,9 @@
+import './Form.css';
 import React from 'react';
 import Personal from './components/FormPersonal';
 import Experience from './components/FormExperience';
 import Education from './components/FormEducation';
 import { Add, Clear, Delete } from './components/Buttons';
-
-/* eslint-disable */
 
 class Form extends React.Component {
   render() {
