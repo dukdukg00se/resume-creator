@@ -15,7 +15,7 @@ class ResumeHeader extends React.Component {
           <ul>
             <li>
               <img src={phoneIcon} alt="icon" className="phone icon" />
-              {this.props.personal.address}
+              {this.props.personal.phone}
             </li>
             <li>
               <img src={emailIcon} alt="icon" className="email icon" />
@@ -23,7 +23,7 @@ class ResumeHeader extends React.Component {
             </li>
             <li>
               <img src={locationIcon} alt="icon" className="location icon" />
-              {this.props.personal.phone}
+              {this.props.personal.address}
             </li>
           </ul>
         </div>
