@@ -1,9 +1,9 @@
+import './App.css';
 import React from 'react';
 import Header from './components/header/Header';
 import Form from './components/form/Form';
 import Resume from './components/resume/Resume';
 import uniqid from 'uniqid';
-import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -152,19 +152,21 @@ class App extends React.Component {
       <div>
         <Header />
 
-        <Form
-          onChange={this.handleChange}
-          onClick={this.handleClick}
-          personalInfo={this.state.personal}
-          experienceList={this.state.experienceList}
-          educationList={this.state.educationList}
-        />
+        <div id="ui">
+          <Form
+            onChange={this.handleChange}
+            onClick={this.handleClick}
+            personalInfo={this.state.personal}
+            experienceList={this.state.experienceList}
+            educationList={this.state.educationList}
+          />
 
-        <Resume
-          personal={this.state.personal}
-          experienceList={this.state.experienceList}
-          education={this.state.educationList}
-        />
+          <Resume
+            personal={this.state.personal}
+            experienceList={this.state.experienceList}
+            educationList={this.state.educationList}
+          />
+        </div>
       </div>
     );
   }
