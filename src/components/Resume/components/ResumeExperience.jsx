@@ -6,10 +6,10 @@ class ResumeExperience extends React.Component {
     const { experienceList } = this.props;
 
     return (
-      <div id="experience-container">
+      <div>
         {experienceList.map((experience) => {
           return (
-            <div key={experience.id} id={experience.id}>
+            <div key={experience.id} id={experience.id} className="info">
               <div>
                 <h4>{experience.position}</h4>
                 <span>
@@ -17,7 +17,7 @@ class ResumeExperience extends React.Component {
                 </span>
               </div>
 
-              <div>
+              <div className="company-info">
                 {experience.company}
                 <span>{experience.location}</span>
               </div>
