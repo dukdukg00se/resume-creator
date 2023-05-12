@@ -6,7 +6,7 @@ A resume application that previews a user's provided information on an effective
 
 \*\* Note, as recommended for all but the most seasoned applicants, this application only allows for a one page resume at this time. Inputs longer than one page will cause the content to overflow the preview.
 
-[Live Demo]()
+[Live Demo](https://dukdukg00se.github.io/resume-creator/)
 
 <img src="./src/assets/app-screenshot.png" width="65%">
 
