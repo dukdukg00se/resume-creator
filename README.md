@@ -8,7 +8,7 @@ A resume application that previews a user's provided information on an effective
 
 [Live Demo]()
 
-<img src="./src/assets/app-screenshot.png" width="50%">
+<img src="./src/assets/app-screenshot.png" width="65%">
 
 ## Learning Objectives
 
