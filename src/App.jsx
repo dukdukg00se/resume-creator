@@ -3,7 +3,7 @@ import Header from './components/header/Header';
 import Form from './components/form/Form';
 import Resume from './components/resume/Resume';
 import uniqid from 'uniqid';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [personal, setPersonal] = useState({
@@ -35,6 +35,10 @@ function App() {
       id: uniqid(),
     },
   ]);
+
+  useEffect(() => {
+    console.log('Mounted');
+  }, []);
 
   const handleChange = (e) => {
     const element = e.target.parentElement;
