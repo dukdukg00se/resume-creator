@@ -113,7 +113,7 @@ function App() {
           },
         ]);
       } else {
-        // educationList
+        // stateKey === 'educationList'
         setEducationList([
           ...educationList,
           {
