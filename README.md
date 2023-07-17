@@ -19,7 +19,7 @@ A resume application that previews a user's provided information on an effective
 
 ## Notes
 
-This project was done as part of [The Odin Project](https://www.theodinproject.com/paths) curriculum and is the [CV Application](https://www.theodinproject.com/lessons/node-path-javascript-cv-application) project. As part of the guidelines, I am initially using class components here which will later be replaced with functional ones.
+This project was done as part of [The Odin Project](https://www.theodinproject.com/paths) curriculum and is the [CV Application](https://www.theodinproject.com/lessons/node-path-javascript-cv-application) project.
 
 ## Future Improvements
 
